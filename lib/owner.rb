@@ -58,7 +58,8 @@ def sell_pets
 pets = cats + dogs 
 pets.each do |pet| pet.mood = "nervous"
 end 
-pets.clear
+pets.each do |pet| pet.owner = nil
+end 
 end 
 def list_pets 
  return  "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
